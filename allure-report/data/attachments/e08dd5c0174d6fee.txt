@@ -1,0 +1,4 @@
+Test Name : Searchfunctionality
+Browser   : chrome
+Thread    : main
+Time      : Fri Feb 06 00:49:02 IST 2026

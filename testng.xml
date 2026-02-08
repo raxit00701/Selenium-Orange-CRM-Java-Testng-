@@ -1,0 +1,34 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Selenium TestNG Suite"
+       verbose="1"
+       parallel="false">
+
+    <!-- ========== LISTENERS ========== -->
+    <listeners>
+        <listener class-name="Listeners.UnifiedTestListener"/>
+    </listeners>
+
+    <!-- ========== PARAMETERS (DEFAULTS) ========== -->
+    <parameter name="browser" value="${browser}"/>
+    <parameter name="env" value="${env}"/>
+    <parameter name="headless" value="${headless}"/>
+    <parameter name="incognito" value="false"/>
+    <parameter name="window" value="max"/>
+
+    <!-- ========== TEST DEFINITION ========== -->
+    <test name="UI Tests">
+
+        <!-- GROUP CONTROL -->
+        <groups>
+            <run>
+                <include name="${groups}"/>
+            </run>
+        </groups>
+
+        <!-- AUTO DISCOVER ALL TEST CLASSES -->
+        <packages>
+            <package name="Tests.*"/>
+        </packages>
+
+    </test>
+</suite>

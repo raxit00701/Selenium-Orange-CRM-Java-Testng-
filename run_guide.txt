@@ -1,0 +1,3 @@
+serial: mvn clean test "-Dsurefire.suiteXmlFiles=testng-multibrowser.xml" -Denv=prod -Dheadless=false
+single browser : mvn clean test "-Dsurefire.suiteXmlFiles=testng-single.xml" -Dbrowser=firefox -Denv=prod -Dheadless=false
+
